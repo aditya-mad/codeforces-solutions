@@ -20,6 +20,7 @@ int main()
         if (nums[minindex] >= nums[i])
             minindex = i;
     }
+
     if (minindex < maxindex)
         ans--;
     ans += (maxindex + size - 1 - minindex);
