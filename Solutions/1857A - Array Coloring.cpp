@@ -1,31 +1,23 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main()
 {
-    int test;
+    int test = 1;
     cin >> test;
 
     for (; test--;)
     {
-        int size, odd = 0, even = 0;
+        int size, num, ans = 0;
         cin >> size;
-        vector<int> nums(size);
 
         for (int i = 0; i < size; i++)
         {
-            cin >> nums[i];
-            if (nums[i] % 2 == 0)
-            {
-                even++;
-            }
-            else
-            {
-                odd++;
-            }
+            cin >> num;
+            ans += num % 2;
         }
 
-        cout << (odd % 2 == 0 ? "YES" : "NO") << endl;
+        cout << (size == 1 || ans % 2 ? "NO\n" : "YES\n");
     }
 
     return 0;
