@@ -10,14 +10,15 @@ int main()
 
     for (; test--;)
     {
-        int size, num, ans = 0;
-        cin >> size;
-        for (int i = 0; i < size; i++)
+        int n, num;
+        cin >> n;
+
+        for (int i = 0; i < n; i++)
         {
             cin >> num;
-            ans ^= num;
+            cout << n - num + 1 << " ";
         }
-        cout << (ans == 0 || size % 2 ? ans : -1) << endl;
+        cout << endl;
     }
 
     return 0;
